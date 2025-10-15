@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScopeIndia</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <div class="header-bar">
+    <img class="slogo" src="{% static 'css/images/scopeindia.webp' %}" alt="ScopeIndia Logo" />
+    <img class="rating" src="{% static 'css/images/google-rating-scope-india.webp' %}" alt="ScopeIndia Text Logo" />
+    <nav class="navigate">
+      <a href="{% url 'index' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'contact' %}">Contact</a>
+      <a href="{% url 'register' %}">Registration</a>
+      <a href="">Login</a>
+      <a href="#">StudentDashboard</a>
+    </nav>
+  </div>
+
+  <div class="banner">SCOPE INDIA Locations & Contact Details</div>
+   <hr class="divider" >
+  <div class="content">
+    <p> Center for Software, Networking, & Cloud Education</p>
+   <p>One of India's best Training destinations for Software, Networking, DevOps and Cloud Computing courses with 18 years of Industrial experience. Over 1,000 students find their dream careers each year, and we have assisted more than 15,000 students so far.
+   </p>
+    <form method="post">
+        {% csrf_token %}
+        <!-- {{ form.as_p }} -->
+          <div class="form-container">
+
+            <div class="form-block">
+                {{ form.Full_Name.label_tag }}
+                {{ form.Full_Name }}
+                {{ form.Full_Name.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Date_of_Birth.label_tag }}
+                {{ form.Date_of_Birth }}
+                {{ form.Date_of_Birth.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Gender.label }}
+                {{ form.Gender }}
+                {{ form.Gender.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Education.label_tag }}
+                {{ form.Education }}
+                {{ form.Education.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Mobile_num.label_tag }}
+                {{ form.Mobile_num }}
+                {{ form.Mobile_num.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Email.label_tag }}
+                {{ form.Email }}
+                {{ form.Email.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Guardians_name.label_tag }}
+                {{ form.Guardians_name }}
+                {{ form.Guardians_name.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Guardians_occupation.label_tag }}
+                {{ form.Guardians_occupation }}
+                {{ form.Guardians_occupation.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Guardians_number.label_tag }}
+                {{ form.Guardians_number }}
+                {{ form.Guardians_number.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Course.label_tag }}
+                {{ form.Course }}
+                {{ form.Course.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Training.label }}
+                {{ form.Training }}
+                {{ form.Training.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Scope_location.label_tag }}
+                {{ form.Scope_location }}
+                {{ form.Scope_location.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Preferred_timing.label_tag }}
+                {{ form.Preferred_timing }}
+                {{ form.Preferred_timing.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Address.label_tag }}
+                {{ form.Address }}
+                {{ form.Address.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.Country.label_tag }}
+                {{ form.Country }}
+                {{ form.Country.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.State.label_tag }}
+                {{ form.State }}
+                {{ form.State.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.city.label_tag }}
+                {{ form.city }}
+                {{ form.city.errors }}
+            </div>
+
+            <div class="form-block">
+                {{ form.pincode.label_tag }}
+                {{ form.pincode }}
+                {{ form.pincode.errors }}
+            </div>
+
+        </div>
+        <!-- <button type="submit" class="submit-btn">Submit</button> -->
+        <button type="submit">Register</button>
+</form>
+</body>
+</html>
