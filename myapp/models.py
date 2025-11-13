@@ -11,7 +11,7 @@ class Registration(models.Model):
     Guardians_name=models.CharField(max_length=50)
     Guardians_occupation=models.CharField(max_length=50)
     Guardians_number=models.CharField(max_length=50)
-    course_choices=[('PF','Python FullStack'),('DM','Digital Marketing'),('MS', 'Mern Stack')]
+    course_choices=[('PF','Python FullStack'),('DM',' DigitalMarketing'),('MS', 'Mern Stack')]
     Course=models.CharField(max_length=50,choices=course_choices)
     Training_choices=[('online' ,'Online'),('offline','Offline')]
     Training=models.CharField(max_length=50,choices=Training_choices)

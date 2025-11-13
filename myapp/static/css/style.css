@@ -322,8 +322,9 @@ gap: 20px;
 .form-control{
     border: 2px solid rgb(255, 165, 0);
     border-radius: 5px;
-    height:10px;
-  
+    height:50px;
+    width:250px;
+    display: block;
    
 }
 
@@ -910,7 +911,7 @@ a{
     border: solid 2px #e5c000;
     margin-bottom: 20px;
 }
-.mission p{
+.mission u{
     color: #f4f4f4;
     font-size: 14px;
     margin-bottom: 20px;
@@ -927,4 +928,8 @@ a{
 }
 .mission .svg-div svg{
     color: #fff;
+}
+.img-container{
+     background: transparent url("{% static 'css/images/scopeindia.webp' %}") no-repeat center center;
+    background-size: cover;
 }

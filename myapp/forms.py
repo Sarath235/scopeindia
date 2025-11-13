@@ -5,8 +5,10 @@ class RegistrationForm(forms.ModelForm):
         model=Registration
         fields="__all__"
         widgets={
-            'Full_Name':forms.TextInput(attrs={'class':'form-control'}),
+            'Full_Name':forms.TextInput(attrs={'class':'form-control','placeholder':'entrt your name'}),
             'Date_of_Birth':forms.DateInput(attrs={'class':'form-control','type':'date'}),
             'Gender':forms.Select(attrs={'class':'form-control'}),
+            'Education  ':forms.Select(attrs={'class':'form-control'}),
+            'Training ':forms.Select(attrs={'class':'form-control'}),
             'Training ':forms.Select(attrs={'class':'form-control'}),
         }
