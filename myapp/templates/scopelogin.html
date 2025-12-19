@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+ {% block content %}
+ <section class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+
+        <div class="card shadow p-4">
+
+            <h3 class="text-center mb-3">Student Login</h3>
+
+            <!-- LOGIN FORM -->
+            <form action="/myapp/scopelogin/" method="POST">
+                {% csrf_token %}
+
+                <!-- EMAIL -->
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" >
+                </div>
+
+                <!-- TEMP-PASSWORD -->
+                <div class="mb-3">
+                    <label class="form-label">Temporary-Password</label>
+                    <input type="password" class="form-control" name="temp_password" >
+                </div>
+
+                <!-- REMEMBER ME -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" name="remember_me" id="remember">
+                    <label class="form-check-label" for="remember">
+                        Remember Me
+                    </label>
+                </div>
+
+                <!-- LOGIN BUTTON -->
+                <button type="submit" class="btn btn-primary w-100 mb-3">Login</button>
+            </form>
+
+            <!-- LINKS -->
+            <div class="text-center">
+                <a href="{% url 'firstlogin' %}">First time login? Get temporary password</a>
+            </div>
+
+            <div class="text-center mt-2">
+                <a href="{% url 'forgotpassword' %}" class="text-danger">Forgot password?</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}
